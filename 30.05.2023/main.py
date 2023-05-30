@@ -9,7 +9,7 @@ scheduler = scheduler.Scheduler()
 scheduler.SCH_Init()
 # task1 = Task1()
 # task2 = Task2()
-aitask = AItask()
+aitask = AItask(0)
 
 
 # scheduler.SCH_Add_Task(task1.Task1Run, 1000, 2000)

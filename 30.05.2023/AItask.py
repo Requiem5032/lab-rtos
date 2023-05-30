@@ -3,7 +3,8 @@ import cv2
 import numpy as np
 
 class AItask:
-    def __init__(self):
+    def __init__(self, index):
+        print("Init AI Task")
         np.set_printoptions(suppress=True)
 
         # Load the model
@@ -13,10 +14,12 @@ class AItask:
         self.class_names = open("labels.txt", "r").readlines()
 
         # CAMERA can be 0 or 1 based on default camera of your computer
-        self.camera = cv2.VideoCapture(0)
+        self.camera = cv2.VideoCapture(index)
+        self.cameraID = index
         return
 
     def aitaskRun(self):
+        print("AI Task is activated!")
         # Disable scientific notation for clarity
         # np.set_printoptions(suppress=True)
 
